@@ -2,9 +2,25 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
+
+
+
   # You can have the root of your site routed with "root"
   root 'static_pages#top'
-
+  resources :users
+  
+  # get '/users' => 'users#index', as: :users
+  # get '/users/new' => 'users#new'
+  
+  # # 'id'の後に'/users/new'とかを置いちゃうと, id=newになってしまいエラーになるので注意！！！
+  # get '/users/:id' => 'users#show'
+  
+  # post '/users' => 'users#create'
+  
+  
+  
+  
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
